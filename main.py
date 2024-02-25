@@ -17,5 +17,13 @@ def profession(prof):
     return render_template('index.html', prof=prof)
 
 
+@app.route('/list_prof/<list>')
+def prof_list(list):
+    prof = ['Инструктор по туризму', 'Бортпроводник', 'Сотрудник круизного лайнера', 'Парфюмер',
+            'Модель', 'Шоколатье', 'Уборщик мест преступлений', 'Психолог домашних животных',
+            'Частный сыровар', 'Пилот воздушного шара']
+    return render_template('prof_list.html', prof=prof, list=list)
+
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
