@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div class="card bg-primary">
+        {% for el in fields %}
+            <h4 class=card-text">{{el}}: {{fields[el]}}</h4>
+        {% endfor %}
+    </div>
+{% endblock %}
