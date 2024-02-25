@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="logo in-fl"></div>
+<h1 class="in-fl">Авторизация</h1>
+<form action="" method="post" novalidate class="form">
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.id1.label }}<br>
+        {{ form.id1(class="form-control") }}<br>
+        {% for error in form.id1.errors %}
+        <div class="alert alert-danger" role="alert">
+            {{ error }}
+        </div>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.pas1.label }}<br>
+        {{ form.pas1(class="form-control", type="password") }}<br>
+        {% for error in form.pas1.errors %}
+        <div class="alert alert-danger" role="alert">
+            {{ error }}
+        </div>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.id2.label }}<br>
+        {{ form.id2(class="form-control") }}<br>
+        {% for error in form.id2.errors %}
+        <div class="alert alert-danger" role="alert">
+            {{ error }}
+        </div>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.pas2.label }}<br>
+        {{ form.pas2(class="form-control", type="password") }}<br>
+        {% for error in form.pas2.errors %}
+    <div class="alert alert-danger" role="alert">
+        {{ error }}
+    </div>
+    {% endfor %}
+    </p>
+    <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
+</form>
+{% endblock %}

@@ -2,3 +2,17 @@ h4 {
     padding-left: 20px;
     color: white
 }
+
+.form {
+    padding-left: 20px;
+}
+
+.logo {
+    background-image: url(../img/logo.png);
+    width: 150px;
+    height: 50px;
+}
+
+.in-fl {
+    display: inline-flex;
+}
